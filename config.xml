@@ -1,0 +1,33 @@
+<?xml version='1.0' encoding='utf-8'?>
+<widget id="com.maxoo.natgeo.kids" version="1.2" xmlns="http://www.w3.org/ns/widgets" xmlns:cdv="http://cordova.apache.org/ns/1.0">
+    <name>Nat Geo for Kids</name>
+    <description>
+       Let your imagination go wild, experience the nature and learn from the environment with our National Geographic App specially designed for kids. There is no limit to the curiosity of children, sometimes they get curious about the animal planet or they want to discover the secrets of space. The Nat Geo App for kids is a unique platform for learning from the open source videos and documentaries created by the top creators of popular channels such as Discovery Channel, Planet Earth and National Geographic Channel.
+    </description>
+    <author email="3three.majors@gmail.com" href="http://3majors.com">
+        Horizon
+    </author>
+    <content src="index.html" />
+    <splash density="xxxhdpi" src="splash.png" />
+    <icon density="xxxhdpi" src="icon.png" />
+    <preference name="Orientation" value="portrait" />
+    <preference name="StatusBarBackgroundColor" value="#503510" />
+    <preference name="NavigationBarBackgroundColor" value="#503510" />
+    <plugin name="cordova-plugin-whitelist" spec="1" />
+    <access origin="*" />
+    <allow-navigation href="https://*youtube.com/*" />
+    <allow-intent href="http://*/*" />
+    <allow-intent href="https://*/*" />
+    <allow-intent href="tel:*" />
+    <allow-intent href="sms:*" />
+    <allow-intent href="mailto:*" />
+    <allow-intent href="geo:*" />
+    <platform name="android">
+        <allow-intent href="market:*" />
+    </platform>
+    <platform name="ios">
+        <allow-intent href="itms:*" />
+        <allow-intent href="itms-apps:*" />
+    </platform>
+    <plugin name="cordova-plugin-navigationbar-color" spec="0.0.8" />
+</widget>

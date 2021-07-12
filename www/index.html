@@ -1,0 +1,301 @@
+<!doctype html>
+<html class="no-js" lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  <title>Nat Geo Kids App</title>
+  <meta name="description" content="A free and modern UI toolkit for web makers based on the popular Bootstrap 4 framework.">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="css/bootstrap.min.css" >
+  <link rel="stylesheet" href="css/font-awesome.min.css">
+  <link rel="stylesheet" href="css/shards.min.css?v=2.1.0">
+  <link rel="stylesheet" href="css/shards-demo.min.css?v=2.1.0">
+  <style>
+	  
+	  /***** MODAL PROPERTIES *****/
+ /*.modal-content {
+    -webkit-box-shadow: none;
+    box-shadow: none;
+    background:transparent;
+    border:none;
+    outline:none;
+}
+.modal-content iframe {
+    border:none;
+    padding:0;
+    margin:0;
+}
+.close {
+    font-size: 80px;
+    margin:-20px 0 0 0;
+}
+/***** MEDIA QUERIES *****
+ @media only screen and (max-width: 641px) {
+    /***** MODAL PROPERTIES *****
+    .modal-body {
+        height:100px;
+        padding:0;
+        margin: 0;
+    }
+    .modal-content {
+        padding:0;
+        margin: 0;
+    }
+    .modal-dialog {
+        position: relative;
+        width: auto;
+        margin: 15px;
+    }
+    .close {
+        margin:-12px 0 0 0;
+    }
+}
+@media only screen and (min-width: 768px) {
+    /***** MODAL PROPERTIES *****
+    .close {
+        font-size: 80px;
+        margin:30px -43px -20px 100px;
+    }
+}*/
+a:link, a:visited, a:hover, a:active{
+    color: #FFB400;
+}	  
+.menu__toggler {
+  position: fixed;
+  top: 40px;
+  left: 14px;
+  z-index: 999;
+  height: 28px;
+  width: 28px;
+  outline: none;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+}
+.menu__toggler span,
+.menu__toggler span::before,
+.menu__toggler span::after {
+  position: absolute;
+  content: '';
+  width: 28px;
+  height: 2.5px;
+  background: #FFB400;
+  border-radius: 20px;
+  transition: 500ms cubic-bezier(0.77, 0, 0.175, 1);
+}
+.menu__toggler span::before {
+  top: -8px;
+}
+.menu__toggler span::after {
+  top: 8px;
+}
+.menu__toggler.active > span {
+  background: transparent;
+	
+}
+.menu__toggler.active > span::before, .menu__toggler.active > span::after {
+  background: #FFB400;
+  top: 0px;
+}
+.menu__toggler.active > span::before {
+  -webkit-transform: rotate(-225deg);
+          transform: rotate(-225deg);
+}
+.menu__toggler.active > span::after {
+  -webkit-transform: rotate(225deg);
+          transform: rotate(225deg);
+}
+
+.menu {
+  position: fixed;
+  left: -30%;
+  z-index: 998;
+  color: #FFB400;
+  background: rgba(90, 97, 105, 0.7);
+  -webkit-clip-path: polygon(0 0, 100% 0, 85% 100%, 0% 100%);
+          clip-path: polygon(0 0, 100% 0, 85% 100%, 0% 100%);
+  width: 30%;
+  height: 100%;
+  padding: 100px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  transition: 300ms left cubic-bezier(0.77, 0, 0.175, 1);
+}
+@media only screen and (max-width: 600px) {
+  .menu {
+    width: 250px;
+    left: -250px;
+    padding: 50px 20px;
+  }
+}
+.menu.active {
+  left: 0;
+	top:0px;
+}
+.menu p {
+  font-size: 1.4rem;
+  margin-bottom: 1rem;
+}
+
+/*
+ * BASIC STYLES
+ */
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.categories_parent{
+		   float: left; width: 100%; margin: 0px;
+	  }
+	  .categories_child {
+		  width: 100%; height: auto; margin: 0px;
+	  }
+	  .categories_child h2{
+		  color: #fff;
+	  } 
+	  .categories{
+		  width: 100%;
+		  float: left;
+
+		  
+	  }	  
+</style>
+</head>
+
+<body>
+  <div class="loader">
+    <div class="page-loader"></div>
+  </div>
+
+<div class="menu">
+	<p><a href="#" onClick="home()" style="text-decoration: none;">Home</a></p>
+	<p><a href="#" onClick="loadVids('PLQlnTldJs0ZR56MScVzlbeucr3brcHb-e',1); return false;" style="text-decoration: none;">Weirdest, Bestest, Truest</a></p>
+	<p><a href="#" onClick="loadVids('PLivjPDlt6ApTqKN6DbR-GOM5omen0Xm2a',1); return false;" style="text-decoration: none;">Just Joking</a></p>
+	<p><a href="#" onClick="loadVids('PLQlnTldJs0ZSUj7JL5bDQyERyO-X97yqq',1); return false;" style="text-decoration: none;">Book Club</a></p>
+	<p><a href="#" onClick="loadVids('PLQlnTldJs0ZTLdDkEdQ1_zBzSk0Cm0ZPN',1); return false;" style="text-decoration: none;">Weird But True</a></p>
+	<p><a href="#" onClick="loadVids('PLivjPDlt6ApS90YoAu-T8VIj6awyflIym',1); return false;" style="text-decoration: none;">Science</a></p>
+  <p><a href="#" onClick="loadVids('PLivjPDlt6ApTjurXykShuUqp7LQcj9s8s',1); return false;" style="text-decoration: none;">Nature & Environment</a></p>
+  <p><a href="#" onClick="loadVids('PLQlnTldJs0ZTW4LC-LlPxAo9H67xHUi8P',1); return false;" style="text-decoration: none;">Animal Antics</a></p>
+	<!--<p><a href="#" onClick="home()" style="text-decoration: none;">About</a></p>-->
+</div>
+<div class="menu__toggler"><span></span></div>
+<div class="categories">
+<div class="categories_parent">
+  <div class="categories_child">
+	  <a href="#" onClick="loadVids('PLQlnTldJs0ZR56MScVzlbeucr3brcHb-e',0); return false;"> <img src="images/1-min.png" width="100%"></a>
+	</div>
+</div>
+ 
+ <div class="categories_parent">
+  <div class="categories_child" >
+	  <a href="#" onClick="loadVids('PLivjPDlt6ApTqKN6DbR-GOM5omen0Xm2a',0); return false;"> <img src="images/2-min.png" width="100%"></a>
+	</div>
+</div>
+
+<div class="categories_parent">
+  <div class="categories_child" >
+	  <a href="#" onClick="loadVids('PLQlnTldJs0ZSUj7JL5bDQyERyO-X97yqq',0); return false;"> <img src="images/3-min.png" width="100%"></a>
+	</div>
+</div>
+
+<div class="categories_parent">
+  <div class="categories_child" >
+	  <a href="#" onClick="loadVids('PLQlnTldJs0ZTLdDkEdQ1_zBzSk0Cm0ZPN',0); return false;"> <img src="images/4-min.png" width="100%"></a>
+	</div>
+</div>
+
+<div class="categories_parent">
+  <div class="categories_child" >
+	  <a href="#" onClick="loadVids('PLivjPDlt6ApS90YoAu-T8VIj6awyflIym',0); return false;"> <img src="images/5-min.png" width="100%"></a>
+	</div>
+</div>
+
+<div class="categories_parent">
+  <div class="categories_child" >
+	  <a href="#" onClick="loadVids('PLivjPDlt6ApTjurXykShuUqp7LQcj9s8s',0); return false;"> <img src="images/6-min.png" width="100%"></a>
+	</div>
+</div>
+
+<div class="categories_parent">
+  <div class="categories_child" >
+	  <a href="#" onClick="loadVids('PLQlnTldJs0ZTW4LC-LlPxAo9H67xHUi8P',0); return false;"> <img src="images/7-min.png" width="100%"></a>
+	</div>
+</div>
+ 
+	</div>
+  <!-- Page Content -->
+  <div class="page-content" style="display: none; padding-top: 0px;">
+    <!-- Content -->
+    <div class="content clearfix">
+      <!-- Cards -->
+      <div id="cards" class="container mb-2" style="padding-bottom: 1px">
+        
+        <div class="example col-md-12 ml-auto mr-auto">
+          <div class="row">
+           
+
+            
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+  </div>
+
+
+
+<div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" style="display: none;" aria-hidden="true">
+            <div class="modal-dialog" role="document">
+              <div class="modal-content">
+                <div class="modal-header">
+                  
+                  <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">×</span>
+                  </button>
+                </div>
+                <div class="modal-body video">
+                  
+                </div>
+                <div class="modal-footer">
+                 
+                </div>
+              </div>
+            </div>
+          </div>
+  <!-- JavaScript -->
+ 
+  
+  <script async defer src="https://buttons.github.io/buttons.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js" ></script>
+  
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+  <script src="js/shards.min.js"></script>
+  <script src="js/demo.min.js"></script>
+  
+  <script type="text/javascript" src="js/admob.js"></script>
+  <script type="text/javascript" src="cordova.js"></script>
+  <script src="js/youtube_hamza_planet_earth.js"></script>
+<script>
+    const toggler = document.querySelector('.menu__toggler');
+const menu = document.querySelector('.menu');
+
+toggler.addEventListener('click', () => {
+  toggler.classList.toggle('active');
+  menu.classList.toggle('active');
+});
+	
+
+
+</script>
+
+</body>
+
+</html>

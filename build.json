@@ -1,0 +1,11 @@
+{
+     "android": {
+         "release": {
+             "keystore": "kids.keystore",
+             "storePassword": "zeeshan123",
+             "alias": "zeeshan",
+             "password" : "zeeshan123",
+             "keystoreType": "jks"
+         }
+     }
+ }
