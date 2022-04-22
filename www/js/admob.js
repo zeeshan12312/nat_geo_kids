@@ -2,7 +2,7 @@ function initApp() {
      
 		
             admob.banner.config({
-                id: 'ca-app-pub-6844478419441129/4550125119',
+                id: 'AD-ID',
                 autoShow: true,
 				isTesting: false,
             });
@@ -11,7 +11,7 @@ function initApp() {
             admob.banner.prepare();
 
             admob.interstitial.config({
-                id: 'ca-app-pub-6844478419441129/8764879901',
+                id: 'AD-ID',
                 autoShow: false,
 				isTesting: false,
             });
