@@ -11,7 +11,7 @@
 
 // https://i.ytimg.com/vi/qxWrnhZEuRU/mqdefault.jpg
 
- 	var key = 'AIzaSyCtS5DMCJuq3EEmujwqsezyFhXftj8js1s';
+ 	var key = 'API-KEY';
    // var playlistId = playlist;
     var URL = 'https://www.googleapis.com/youtube/v3/playlistItems';
 
